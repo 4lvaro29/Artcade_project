@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @component.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @component.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @component.stock %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>
