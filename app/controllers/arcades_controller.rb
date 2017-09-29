@@ -24,7 +24,9 @@ class ArcadesController < ApplicationController
   # POST /arcades
   # POST /arcades.json
   def create
+    
     @arcade = Arcade.new(arcade_params)
+
 
     respond_to do |format|
       if @arcade.save
