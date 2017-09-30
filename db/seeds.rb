@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Arcade.destroy_all
+Component.destroy_all
+
+10.times do
+
+	arcade = Arcade.create(
+		
+		name: "Super Mario arcade",
+		price: 220000,
+		image: "http://lorempixel.com/400/200/" 
+)
+	component = Component.create(
+
+		name: "Raspberry Pi 3",
+		price: 34000,
+		image: "http://lorempixel.com/400/200/"
+
+		)
+
+	end
+

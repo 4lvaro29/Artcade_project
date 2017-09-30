@@ -10,6 +10,7 @@ class ArcadesController < ApplicationController
   # GET /arcades/1
   # GET /arcades/1.json
   def show
+
   end
 
   # GET /arcades/new
@@ -71,6 +72,6 @@ class ArcadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :order_id)
+      params.require(:arcade).permit(:name, :price, :image, :order_id)
     end
 end

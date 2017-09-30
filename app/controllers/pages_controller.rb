@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+  	@arcades = Arcade.all
   end
 
   def about
