@@ -24,6 +24,7 @@ class ComponentsController < ApplicationController
   # POST /components
   # POST /components.json
   def create
+  
     @component = Component.new(component_params)
 
     respond_to do |format|
