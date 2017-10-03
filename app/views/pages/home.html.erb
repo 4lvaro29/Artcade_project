@@ -1,19 +1,22 @@
 <div class="container">
-<h1>Home</h1>
+	<h1>Home</h1>
 	<div class="row">
 		<% @arcades.each_slice(4) do |row| %>
-			<% row.each do |arcade| %>
-					<div class="col">
-						<div class="card">
-						<%= image_tag arcade.image, class:"card-img-top" %>
-							<div class="body">
+		<% row.each do |arcade| %>
+		<div class="col">
+			<div class="card">
+				<%= image_tag arcade.image, class:"card-img-top" %>
+				<div class="body">
 					<h5><%= arcade.name %></h5>
 					<p>	<%= arcade.price %> </p>
-						</div>
-						</div>			
-					</div>
-			<% end %>
-			<div class="w-100"></div>
+					<%= link_to orders_path, class: "btn btn-default" do %>
+    				<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+				<% end %>
+				</div>
+			</div>			
+		</div>
+		<% end %>
+		<div class="w-100"></div>
 		<% end %>
 	</div>
 </div>
