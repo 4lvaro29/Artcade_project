@@ -5,6 +5,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets")
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "images")
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
