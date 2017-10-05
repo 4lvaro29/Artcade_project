@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   resources :components
   resources :arcades
   resources :orders
+    
     devise_for :users, controllers: {
-      sessions: 'users/sessions'
+      sessions: 'users/sessions',
+      registrations: 'users/registrations'
+      
     }
 
     root 'pages#home'
