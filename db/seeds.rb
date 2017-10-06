@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 Arcade.destroy_all
 Component.destroy_all
+
+
+user = User.create(first_name: "alvaro",last_name: "urbina", address: "riquelme 340", phone: "124343534", email: "aurbina@gmail.com", password: "123456", password_confirmation: "123456")
 
 10.times do
 

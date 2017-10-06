@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   # Relations
   has_many :orders
+  #User relations
+  
 end

@@ -1,3 +1,4 @@
+
   <!-- Header -->
   <div class="agileheader" id="agileitshome">
 
@@ -24,34 +25,15 @@
             <li><a href="<%= pages_home_path %>">Home</a></li>
             <li><a href="<%= pages_about_path %>">Nosotros</a></li>
             <li><a href="<%= pages_contact_path %>">Contacto</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iniciar sesión<b class="caret"></b></a>
-              <div class="dropdown-menu">
-                <form action="#" method="post">
-                  <div id="login" class="animate w3loginagile form">
-                    <h3>¿Ya inscrito?</h3>
-                    <input type="text" Name="Userame" placeholder="Nombre de usuario" required="">
-                    <input type="password" Name="Password" placeholder="Contraseña" required="">
-                    <div class="send-button wthree agileits">
-                      <input type="submit" value="Inicia sesión">
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </form>
-                <form action="#" method="post">
-                  <div id="register" class="animate w3registeragile form">
-                    <h3>Crear una cuenta</h3>
-                    <input type="text" Name="Name" placeholder="Nombre" required="">
-                    <input type="text" Name="Email" placeholder="Email" required="">
-                    <input type="password" Name="Password" placeholder="Contraseña" required="">
-                    <div class="send-button wthree agileits">
-                      <input type="submit" value="Crea una cuenta">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><a href="<%= destroy_user_session_path %>" data-method="delete">Cerrar sesión</a></li>
+        <% else %>
+          <li><a href="<%= new_user_registration_path %>">Registrarse</a></li>
+          <li><a href="<%= new_user_session_path %>">Iniciar sesión</a></li>
+        <% end %>
+
+            
         </div><!-- //Navbar-Collapse -->
 
       </nav>
