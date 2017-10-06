@@ -29,7 +29,7 @@ User.create(first_name: "Eugenia",last_name: "Prieto", address: "Riquelme 340, l
 
 designs = %w(Wood Classic Fancy Cooler StreetFighter)
 designs.each do |design|
-	Design.create(name: design)
+	Design.create(name: design, price: 20000)
 end
 
 brand_1 = Brand.create(name: 'Samsung')

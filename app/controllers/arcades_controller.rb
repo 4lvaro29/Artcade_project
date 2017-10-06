@@ -16,6 +16,7 @@ class ArcadesController < ApplicationController
   # GET /arcades/new
   def new
     @arcade = Arcade.new
+    @designs = Design.all
   end
 
   # GET /arcades/1/edit
@@ -27,6 +28,7 @@ class ArcadesController < ApplicationController
   def create
     
     @arcade = Arcade.new(arcade_params)
+
 
 
     respond_to do |format|
@@ -72,6 +74,6 @@ class ArcadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :image, :order_id)
+      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id)
     end
 end

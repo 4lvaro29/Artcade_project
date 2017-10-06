@@ -11,22 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price)%>
+  
 
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-  </div>
-
-  <div class="field">
-    <%= f.label :order_id %>
-    <%= f.text_field :order_id %>
-  </div>
-
-  <div class="actions">
+<div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
