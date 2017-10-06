@@ -13,4 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap.min
+//= require responsiveslides.min
+//= require cbpFWTabs
+//= require owl.carousel
+//= require waypoints.min
+//= require counterup.min
+//= require jquery.chocolat
 //= require_tree .
