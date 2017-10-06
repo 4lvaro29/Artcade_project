@@ -17,7 +17,7 @@
     <% @components.each do |component| %>
       <tr>
         <td><%= component.name %></td>
-        <td><%= component.brand %></td>
+        <td><%= component.brand.name unless component.brand.nil? %></td>
         <td><%= component.price %></td>
         <td><%= component.stock %></td>
         <td><%= component.image %></td>

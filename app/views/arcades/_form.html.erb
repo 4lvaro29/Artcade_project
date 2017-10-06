@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price)%>
   
 
