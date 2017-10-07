@@ -1,15 +1,8 @@
-
-<<<<<<< HEAD
-=======
-
-<h3>Welcome</h3>
->>>>>>> master
-
-
-<h2>Pasos para crear un arcade</h2>
+<div class="container">
 <% if user_signed_in? %>
 	<h5> Bienvenido <%= current_user.email %></h5>
 <% end %>
+<h2>Pasos para crear un arcade</h2>
 <%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
-
+</div>
 
