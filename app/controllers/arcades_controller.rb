@@ -17,6 +17,7 @@ class ArcadesController < ApplicationController
   def new
     @arcade = Arcade.new
     @designs = Design.all
+
   end
 
   # GET /arcades/1/edit
@@ -28,6 +29,8 @@ class ArcadesController < ApplicationController
   def create
     
     @arcade = Arcade.new(arcade_params)
+    
+
 
 
 
