@@ -15,6 +15,7 @@ class ArcadesController < ApplicationController
 
   # GET /arcades/new
   def new
+    
     @arcade = Arcade.new
     @designs = Design.all
 
