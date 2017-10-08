@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   resources :components
-  resources :arcades
+  resources :arcades do
+    member do
+      get :add_components
+    end
+  end
   resources :orders
     
     devise_for :users, controllers: {

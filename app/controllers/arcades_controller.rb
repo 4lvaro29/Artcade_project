@@ -15,12 +15,19 @@ class ArcadesController < ApplicationController
 
   # GET /arcades/new
   def new
+    
     @arcade = Arcade.new
     @designs = Design.all
+
   end
 
   # GET /arcades/1/edit
   def edit
+  end
+
+  def add_components
+    
+    
   end
 
   # POST /arcades
@@ -28,12 +35,14 @@ class ArcadesController < ApplicationController
   def create
     
     @arcade = Arcade.new(arcade_params)
+    
+
 
 
 
     respond_to do |format|
       if @arcade.save
-        format.html { redirect_to @arcade, notice: 'Arcade was successfully created.' }
+        format.html { redirect_to add_components_arcade_path(@arcade), notice: 'Arcade was successfully created.' }
         format.json { render :show, status: :created, location: @arcade }
       else
         format.html { render :new }
