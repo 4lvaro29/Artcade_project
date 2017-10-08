@@ -28,3 +28,20 @@
 i.fa {
 	padding-right: 5px;
 }	 
+
+div.row img {
+	display: block;
+	margin: auto;
+	width: 70px;
+	height: 70px;
+}
+
+div.row  {
+	text-align: center;
+	color: #2bca36;
+}
+
+div.boton {
+	text-align: center;
+
+}
