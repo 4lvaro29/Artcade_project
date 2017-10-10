@@ -29,7 +29,9 @@ class ArcadesController < ApplicationController
     @components = Component.all
   end
 
-
+  def update_arcade_components
+    byebug
+  end
   # POST /arcades
   # POST /arcades.json
   def create
@@ -79,10 +81,11 @@ class ArcadesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_arcade
       @arcade = Arcade.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id)
+      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id,component_ids: [] )
     end
 end
