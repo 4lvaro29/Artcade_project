@@ -15,9 +15,63 @@
  *= require_tree .
  *= require_self
  */
+ body {
+ 	background: url(fondo.png);
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+ }
 
- form.container {
+
+.navbar-default{
+	background-color: #262626 !important;
+	border-color: #262626 !important;
+
+
+
+}
+.navbar-default ul li{
+	-
+}
+.navbar-default ul li:hover{
+	background-color: #440aa3 !important;
 	
+	
+}
+
+.navbar-default a{
+	color: white !important;
+	font-family: 'Nova Flat', cursive;
+}
+
+.main-box{
+	background-color: #262626;
+	padding: 100px !important;
+	margin-bottom: 100px !important;
+}
+
+.info-main{
+	padding: 100px auto;
+	background-color: #262626;
+	color: white !important;
+}
+
+.paso-index{
+	font-size: 35px !important;
+	background-color: #440aa3;
+    border-radius: 100%;
+    
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+	
+	color: white;
+	display: inline-block;
+	font-family: 'Nova Flat', cursive;
+	font-weight: bolder;
+}
+ form.container {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border: solid #ccc 1px;
@@ -28,6 +82,17 @@
 i.fa {
 	padding-right: 5px;
 }	 
+
+h1 {
+	font-family: 'Nova Flat', cursive;
+	color: white;
+}
+
+
+h2 {
+	font-family: 'Nova Flat', cursive;
+	color: white;
+}
 
 div.row img {
 	display: block;
@@ -45,3 +110,82 @@ div.boton {
 	text-align: center;
 
 }
+.register-box{
+	margin-bottom: 100px !important;
+}
+
+.register-box h2{
+	font-size: 35px;
+	color: white;
+	font-weight: bolder;
+}
+
+.form-box {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #d8d8d8;
+	margin-bottom: 0px !important;
+	
+	-webkit-transition: box-shadow 2s;
+}
+
+.form-box:hover{
+	    box-shadow: 1px 1px 6px #5f5656;
+	    margin-bottom: 15px !important;
+	    
+}
+.form-box label{
+	font-family: 'Nova Flat', cursive;
+	margin-top: 5px !important;
+}
+.form-box input{
+	width: 100% !important;
+	
+	border: 1px solid #440aa3 !important;
+}
+
+.sign-b input {
+	background-color: #440aa3 !important;
+	margin-top: 10px !important;
+	color: white;
+	font-family: 'Nova Flat', cursive;
+	border: none !important;
+	padding: 5px;
+	border-radius: 3px !important;
+	-webkit-transition: background-color 2s;
+	width: 100% !important;
+
+}
+.sign-b input:hover{
+	background-color: #c62eff !important;
+	-webkit-transition: background-color 2s;
+	
+	
+}
+
+
+div.form-group{
+	font-family: 'Nova Flat', cursive;
+	
+
+}
+
+
+
+
+/*
+.footer span {
+	color: white !important;
+	font-family: 'Nova Flat', cursive;
+	
+}
+
+.footer {
+	padding: 20px;
+	margin: 0;
+	background-color: #262626 !important;
+	border-color: #262626 !important;
+	
+	}
+*/

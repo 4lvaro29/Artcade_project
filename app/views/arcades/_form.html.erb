@@ -10,16 +10,19 @@
       </ul>
     </div>
   <% end %>
-
-<div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, required: true %>
+  
+<div class="form-box col-md-3">
+  <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true %>
   </div>
   
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price)%>
   
 
-<div class="actions">
-    <%= f.submit %>
+  <div class="actions sign-b">
+      <%= f.submit %>
+      <% end %>
   </div>
-<% end %>
+</div>
+

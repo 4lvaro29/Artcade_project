@@ -1,47 +1,74 @@
+
+<div class="container-fluid main-box">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6 col-md-offset-3 info-main">
+			<h1>Artcade | Diseña tu Arcade</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam, praesentium, illo hic consectetur totam eum culpa rerum eveniet earum neque, porro cum? Distinctio, impedit. Perferendis laboriosam omnis deleniti cumque?
+			</p>
+			
+		</div>
+	</div>
+	
+</div>
+
 <div class="container"> 
-<h1>Pasos para crear tu Artcade</h1>
-<div class="row">
-  <div class="col-md-4">
-    <div class="thumbnail">
-       <%= image_tag "paso-1.png" %>
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia expedita iste aut pariatur impedit, nisi illo adipisci labore doloribus accusamus facere voluptatem omnis deserunt. Distinctio itaque necessitatibus.</p>
-      </div>
-    </div>
-  </div>
+	<h2>Pasos para crear tu Artcade</h2>
+		<div class="row">
+
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="paso-index">
+						<p class="">1</p>
+					</div>
+					
+					<div class="caption">
+						<h3>Paso 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia expedita iste aut pariatur impedit, nisi illo adipisci labore doloribus accusamus facere voluptatem omnis deserunt. Distinctio itaque necessitatibus.</p>
+					</div>
+				</div>
+			</div>
 
 
-  <div class="col-md-4">
-    <div class="thumbnail">
-    	<%= image_tag "paso-2.png" %>
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit modi voluptatibus odit distinctio nemo quas, dignissimos, necessitatibus facere illum, eaque praesentium mollitia quae atque nihil, delectus explicabo. Repellendus, ullam sit.</p>
-      </div>
-    </div>
-  </div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="paso-index">
+						<p class="">2</p>
+					</div>
+					<div class="caption">
+						<h3>Paso 2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit modi voluptatibus odit distinctio nemo quas, dignissimos, necessitatibus facere illum, eaque praesentium mollitia quae atque nihil, delectus explicabo. Repellendus, ullam sit.</p>
+					</div>
+				</div>
+			</div>
 
 
-  <div class="col-md-4">
-    <div class="thumbnail">
-      	<%= image_tag "paso-3.png" %>
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci laborum modi beatae quam doloremque sed ex dolores? Optio nemo pariatur deleniti quibusdam quidem corrupti, voluptatem quaerat voluptas quia, obcaecati reprehenderit.</p>
-      </div>
-    </div>
-  </div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<div class="paso-index">
+						<p class="">3</p>
+					</div>
+					<div class="caption">
+						<h3>Paso 3</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci laborum modi beatae quam doloremque sed ex dolores? Optio nemo pariatur deleniti quibusdam quidem corrupti, voluptatem quaerat voluptas quia, obcaecati reprehenderit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div class="boton">
+		<div class="container">
+			<% if user_signed_in? %>
+			<h5> Bienvenido <%= current_user.email %></h5>
+			<% end %>
+	
+
+
+			<%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
+		</div>
+	</div>
 </div>
 
-<div class="boton">
-<div class="container">
-<% if user_signed_in? %>
-	<h5> Bienvenido <%= current_user.email %></h5>
-	<% end %>
-
-
-<%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
-</div>
-</div>
-
+<br>
+<br>
+<br>
