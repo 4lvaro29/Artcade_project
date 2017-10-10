@@ -13,5 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap.min
+(//= require bootstrap.min
 //= require_tree .
+
+
+$(document).'turbolinks:load'(function(){
+
+	$(window).scroll(function(){
+		var barra = $(window).scrollTop();
+		var posicion = barra *0.10;
+
+		$('body').css({
+			'background-position': '0 -' + posicion + 'px'
+		});
+	});
+});
