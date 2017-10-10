@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :arcades do
     member do
       get :add_components
+      post :update_arcade_components
+      
     end
   end
   resources :orders

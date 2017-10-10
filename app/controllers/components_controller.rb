@@ -10,6 +10,7 @@ class ComponentsController < ApplicationController
   # GET /components/1
   # GET /components/1.json
   def show
+    
   end
 
   # GET /components/new
@@ -70,6 +71,6 @@ class ComponentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def component_params
-      params.require(:component).permit(:name, :price, :stock, :description, :image)
+      params.require(:component).permit(:name, :price, :stock, :description, :image )
     end
 end

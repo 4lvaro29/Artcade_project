@@ -1,6 +1,6 @@
 class ArcadesController < ApplicationController
-  before_action :set_arcade, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_arcade, only: [:show, :edit, :update, :destroy,:add_components, :update_arcade_components]
+  
   # GET /arcades
   # GET /arcades.json
   def index
@@ -26,8 +26,16 @@ class ArcadesController < ApplicationController
   end
 
   def add_components
+    @components = Component.all
+  end
+
+  def update_arcade_components
     
-    
+    if @arcade.update_arcade_components(arcade_params[:component_ids])
+      redirect_to arcade_path(@arcade)
+    else
+      redirect_to add_components_arcade_path(@arcade), alert: 'No se pudo agregar los componentes'
+    end
   end
 
   # POST /arcades
@@ -36,9 +44,6 @@ class ArcadesController < ApplicationController
     
     @arcade = Arcade.new(arcade_params)
     
-
-
-
 
     respond_to do |format|
       if @arcade.save
@@ -79,10 +84,11 @@ class ArcadesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_arcade
       @arcade = Arcade.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id)
+      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id,component_ids:[] )
     end
 end

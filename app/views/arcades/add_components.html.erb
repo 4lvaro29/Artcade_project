@@ -1,24 +1,32 @@
-<form class="container">
-  <h2>Elige tus componentes</h2>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Monitores</label>
-    <select type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"><option value="Monitor 20">Monitor 20'</option><option value="Monitor 24">Monitor 24'</option><option value="Monitor 29">Monitor 29'</option></select>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Botones</label>
-    <select type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"><option value="Botones Azules">Botones Azules</option><option value="Botones Rojos">Botones Rojos</option><option value="Botones Amarillos">Botones Amarillos</option></select>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Palancas</label>
-    <select type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><option value="Palanca1">Palancas Rojas</option><option value="">Palancas Negras</option></select>
-  </div>
-  <div class="form-group">
-  <label for="exampleInputPassword1">Otros Accesorios</label>
-  <select type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><option value="Frigobar">Frigobar</option><option value="Fichero Clasico">Fichero Clásico</option></select>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Emuladores</label>
-    <select type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><option value="Snes">Snes</option><option value="Sega">Sega</option><option value="Gameboy Advance">Gameboy Advance</option></option></select>
-  </div>
-  <button type="submit" class="btn btn-primary">Crear</button>
-</form>
+
+<%= form_tag update_arcade_components_arcade_path, method: :post do %>
+<h4>Elige tus componentes</h4>
+<div class="form-group">
+  <label for="exampleInputEmail1">Monitores</label>   
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::MONITORES }, "id", "name"), class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Memorias</label>
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::MEMORIAS }, "id", "name"), class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Botones</label>
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::BOTONES }, "id", "name"), class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Palancas</label>
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::PALANCAS }, "id", "name"), class: 'form-control' %>
+</div>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Emuladores</label>
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::EMULADORES }, "id", "name"), class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Otros Accesorios</label>
+  <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::OTROS_ACCESORIOS }, "id", "name"), class: 'form-control' %>
+</div>
+
+<%= submit_tag "Crear", class:"btn btn-success" %>
+<% end %>
+
