@@ -29,7 +29,7 @@ class ArcadesController < ApplicationController
   end
 
   def update_arcade_components
-    if @component.update_arcade_components(arcade_params[:component_ids])
+    if @arcade.update_arcade_components(arcade_params[:component_ids])
       redirect_to arcade_path(@arcade)
     else
       redirect_to add_components_arcade_path(@arcade), alert: 'No se pudo agregar los componentes'
