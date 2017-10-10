@@ -10,6 +10,7 @@ class ComponentsController < ApplicationController
   # GET /components/1
   # GET /components/1.json
   def show
+    
   end
 
   # GET /components/new
