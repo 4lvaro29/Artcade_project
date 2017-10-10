@@ -26,6 +26,7 @@ class ArcadesController < ApplicationController
   end
 
   def add_components
+    @components = Component.all
   end
 
 
