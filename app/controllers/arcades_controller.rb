@@ -1,6 +1,6 @@
 class ArcadesController < ApplicationController
   before_action :set_arcade, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /arcades
   # GET /arcades.json
   def index
@@ -30,7 +30,7 @@ class ArcadesController < ApplicationController
   end
 
   def update_arcade_components
-    byebug
+  byebug
   end
   # POST /arcades
   # POST /arcades.json
@@ -38,9 +38,6 @@ class ArcadesController < ApplicationController
     
     @arcade = Arcade.new(arcade_params)
     
-
-
-
 
     respond_to do |format|
       if @arcade.save
@@ -81,11 +78,11 @@ class ArcadesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_arcade
       @arcade = Arcade.find(params[:id])
-      
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id,component_ids: [] )
+      params.require(:arcade).permit(:name, :price, :image, :order_id, :design_id,component_ids:[] )
     end
 end

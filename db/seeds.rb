@@ -91,3 +91,5 @@ Component.create(name: "Monitor 24 pulgadas",description: "Lorem ipsum dolor sit
 
 Component.create(name: "Monitor 29 pulgadas",description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, temporibus.", price: 50000, image: "http://medios.plazavip.com/fotos/productos_sears1/original/2574168.jpg", brand: brand_3, component_type: 1)
 
+Component.create(name: "Retro Pie",description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, temporibus.", price: 50000, image: "http://medios.plazavip.com/fotos/productos_sears1/original/2574168.jpg", brand: brand_3, component_type: 5)
+
