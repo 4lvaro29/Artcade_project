@@ -19,5 +19,6 @@ class Arcade < ApplicationRecord
     end
     result
   end
+  
 end
   

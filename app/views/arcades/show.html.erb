@@ -2,7 +2,8 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<th>Arcade</th>
+		
+		<h1><%= @arcade.name %></h1>
 		<th>Design</th>
 		<th>Design Price</th>
 		<th>Component</th>
@@ -11,7 +12,6 @@
 		<table class="table">
 			<% @arcade.components.each do |component| %>
 			<tr>
-				<td><%= @arcade.name %></td>
 				<td><%= @arcade.design.name %></td>
 				<td><%= @arcade.design.price %></td>
 				<td><%= component.name %></td>
