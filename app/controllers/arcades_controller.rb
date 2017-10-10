@@ -1,5 +1,5 @@
 class ArcadesController < ApplicationController
-  before_action :set_arcade, only: [:show, :edit, :update, :destroy]
+  before_action :set_arcade, only: [:show, :edit, :update, :destroy, :add_components, :update_arcade_components]
 
   # GET /arcades
   # GET /arcades.json
@@ -14,8 +14,7 @@ class ArcadesController < ApplicationController
   end
 
   # GET /arcades/new
-  def new
-    
+  def new    
     @arcade = Arcade.new
     @designs = Design.all
 
@@ -34,13 +33,8 @@ class ArcadesController < ApplicationController
   end
   # POST /arcades
   # POST /arcades.json
-  def create
-    
+  def create    
     @arcade = Arcade.new(arcade_params)
-    
-
-
-
 
     respond_to do |format|
       if @arcade.save
