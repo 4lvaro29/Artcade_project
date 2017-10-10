@@ -26,9 +26,8 @@ class ArcadesController < ApplicationController
   end
 
   def add_components
-    
-    
   end
+
 
   # POST /arcades
   # POST /arcades.json

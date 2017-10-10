@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :components
   resources :arcades do
     member do
-      get :add_components
+      get :add_components 
+
     end
   end
   resources :orders
