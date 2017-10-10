@@ -1,5 +1,5 @@
 class ArcadesController < ApplicationController
-  before_action :set_arcade, only: [:show, :edit, :update, :destroy]
+  before_action :set_arcade, only: [:show, :edit, :update, :destroy,:add_components, :update_arcade_components]
   
   # GET /arcades
   # GET /arcades.json
@@ -30,8 +30,14 @@ class ArcadesController < ApplicationController
   end
 
   def update_arcade_components
-  byebug
+    
+    if @arcade.update_arcade_components(arcade_params[:component_ids])
+      redirect_to arcade_path(@arcade)
+    else
+      redirect_to add_components_arcade_path(@arcade), alert: 'No se pudo agregar los componentes'
+    end
   end
+
   # POST /arcades
   # POST /arcades.json
   def create
