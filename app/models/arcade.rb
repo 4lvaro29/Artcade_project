@@ -5,6 +5,9 @@ class Arcade < ApplicationRecord
   has_many :component_arcade
   has_many :components, through: :component_arcade
 
+  #Carrierwave
+  mount_uploader :photo, PhotoUploader
+
   	# Instance Methods
 
   	def update_arcade_components component_ids

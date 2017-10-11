@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     member do
       get :add_components
       post :update_arcade_components
+      post :order_confirmations
       
     end
   end

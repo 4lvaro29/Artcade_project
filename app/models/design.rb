@@ -1,7 +1,7 @@
 class Design < ApplicationRecord
-	
 	#Relations
 	has_many :arcades
+	#Carrierwave
 
 	def name_price
 		"#{name} - #{helper.number_to_currency(price, unit: "$", separator: ",", delimiter: ".", precision: 0)}"

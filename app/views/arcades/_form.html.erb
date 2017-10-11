@@ -18,8 +18,8 @@
   </div>
   
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price)%>
-  
-
+  <%= f.file_field :photo %>
+  <%= f.hidden_field :photo_cache %>
   <div class="actions sign-b">
       <%= f.submit %>
       <% end %>
