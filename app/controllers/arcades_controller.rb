@@ -1,4 +1,5 @@
 class ArcadesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_arcade, only: [:show, :edit, :update, :destroy,:add_components, :update_arcade_components]
   
   # GET /arcades
