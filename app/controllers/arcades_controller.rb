@@ -7,6 +7,10 @@ class ArcadesController < ApplicationController
     @arcades = Arcade.all
   end
 
+  def my_arcades
+    @arcades = current_user.arcades
+  end
+
   # GET /arcades/1
   # GET /arcades/1.json
   def show

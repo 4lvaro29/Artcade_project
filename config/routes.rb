@@ -10,17 +10,17 @@ Rails.application.routes.draw do
   resources :arcades do
     member do
       get :add_components
-      post :update_arcade_components
-      post :order_confirmations
-      
+      post :update_arcade_components      
+    end
+    collection do
+      get :my_arcades
     end
   end
   resources :orders
     
     devise_for :users, controllers: {
       sessions: 'users/sessions',
-      registrations: 'users/registrations'
-      
+      registrations: 'users/registrations'      
     }
 
     root 'pages#home'
