@@ -3,28 +3,38 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		
-		<h1 class="titulo"><%= @arcade.name %></h1>
-		<h1 class="titulo"><%= @arcade.design.name %></h1>
-		<th>Design Price</th>
-		<th>Component</th>
-		<th>Component Price</th>
-		<th>Image</th>
+		<h1 class="titulo"><%= @arcade.name <%><small> <%= @arcade.design.name %></small></%></h1>
+		<hr>
+		<h3>Detalle</h3>
 		<table class="table">
-			<% @arcade.components.each do |component| %>
-			<tr>
-				
-				<td><%= @arcade.design.price %></td>
-				<td><%= component.name %></td>
-				<td><%= component.price %></td>
-				<td><%= component.image %></td>
-			</tr>
-			<% end %>
-			<tr>
-		<td> Total: </td>
-		<td> <%= @arcade.components.map{|component| component.price}.sum %> </td>
-	</tr>	
+			<thead>
+				<tr>
+					<th>Descripción</th>
+					<th>Precio</th>
+					<th>Imagen</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @arcade.components.each do |component| %>
+				<tr>					
+					<td><%= component.name %></td>
+					<td><%= component.price %></td>
+					<td><%= component.image %></td>
+				</tr>
+				<% end %>
+				<tr>
+					<td><%= @arcade.design.name %></td>
+					<td><%= @arcade.design.price %></td>
+					<td><%= @arcade.design.image %></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3"> Total: <%= @arcade.components.sum(:price) %></td>				
+				</tr>
+			</tfoot>
 		</table>
-<%= link_to "Comprar", order_confirmations_arcade_path, class:"btn btn-success", method: :post %>
+		<%= link_to "Ir a mi carrito", order_confirmations_arcade_path, class:"btn btn-success", method: :post %>
 	</div>
 </div>
 
