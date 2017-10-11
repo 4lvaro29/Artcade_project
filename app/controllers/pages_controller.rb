@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@arcades = Arcade.all.suffle
+  	@arcades = Arcade.all.shuffle
   end
 
   def about
