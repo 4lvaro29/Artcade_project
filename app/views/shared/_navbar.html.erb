@@ -20,6 +20,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+        <li><%= link_to my_arcades_arcades_path, 'Mis Arcades' %></li>
         <li><a href="#"><i class="fa fa-user fa-fw"></i><%= current_user.email %></a></li>
         <% end %>
          <% if user_signed_in? %>
