@@ -14,11 +14,9 @@ class ArcadesController < ApplicationController
   end
 
   # GET /arcades/new
-  def new
-    
+  def new    
     @arcade = Arcade.new
     @designs = Design.all
-
   end
 
   # GET /arcades/1/edit
@@ -29,9 +27,9 @@ class ArcadesController < ApplicationController
     @components = Component.all
   end
 
-  def update_arcade_components
-    
+  def update_arcade_components    
     if @arcade.update_arcade_components(arcade_params[:component_ids])
+      @arcade.set_price
       redirect_to arcade_path(@arcade)
     else
       redirect_to add_components_arcade_path(@arcade), alert: 'No se pudo agregar los componentes'
