@@ -23,14 +23,15 @@
 				</tr>
 				<% end %>
 				<tr>
-					<td><%= @arcade.design.name %></td>
+					<td>Diseño <%= @arcade.design.name %></td>
 					<td><%= @arcade.design.price %></td>
 					<td><%= @arcade.design.image %></td>
 				</tr>
 			</tbody>
 			<tfoot>
 				<tr>
-					<td colspan="3"> Total: <%= @arcade.components.sum(:price) %></td>				
+					<td>Total: </td>				
+					<td colspan="2"><%= @arcade.components.sum(:price) %></td>				
 				</tr>
 			</tfoot>
 		</table>
