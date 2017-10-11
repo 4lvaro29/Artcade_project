@@ -18,7 +18,6 @@
       <label for="exampleInputEmail1">Palancas</label>
       <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::PALANCAS }, "id", "name"), class: 'form-control' %>
     </div>
-    </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Emuladores</label>
       <%= select_tag "arcade[component_ids][]", options_from_collection_for_select(@components.select { |c| c.component_type == Component::EMULADORES }, "id", "name"), class: 'form-control' %>
