@@ -13,15 +13,16 @@
   
 <div class="form-box col-md-3">
   <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name, required: true %>
+      <%= f.label :name, 'Nombre del Arcade' %>
+      <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
   
-  <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price)%>
-  <%= f.file_field :photo %>
+  <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price) %>
+  <!-- <%= f.file_field :photo, class: 'form-control' %>
   <%= f.hidden_field :photo_cache %>
+  -->
   <div class="actions sign-b">
-      <%= f.submit %>
+      <%= f.submit 'Continuar' %>
       <% end %>
   </div>
 </div>

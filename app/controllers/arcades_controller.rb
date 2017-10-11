@@ -1,10 +1,15 @@
 class ArcadesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_arcade, only: [:show, :edit, :update, :destroy,:add_components, :update_arcade_components]
   
   # GET /arcades
   # GET /arcades.json
   def index
     @arcades = Arcade.all
+  end
+
+  def my_arcades
+    @arcades = current_user.arcades
   end
 
   # GET /arcades/1
@@ -14,11 +19,9 @@ class ArcadesController < ApplicationController
   end
 
   # GET /arcades/new
-  def new
-    
+  def new    
     @arcade = Arcade.new
     @designs = Design.all
-
   end
 
   # GET /arcades/1/edit
@@ -29,9 +32,9 @@ class ArcadesController < ApplicationController
     @components = Component.all
   end
 
-  def update_arcade_components
-    
+  def update_arcade_components    
     if @arcade.update_arcade_components(arcade_params[:component_ids])
+      @arcade.set_price
       redirect_to arcade_path(@arcade)
     else
       redirect_to add_components_arcade_path(@arcade), alert: 'No se pudo agregar los componentes'
@@ -46,7 +49,7 @@ class ArcadesController < ApplicationController
   def create
     
     @arcade = Arcade.new(arcade_params)
-    
+    @arcade.user = current_user
 
     respond_to do |format|
       if @arcade.save

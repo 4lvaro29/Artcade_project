@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">   
+    <h1 class="titulo">Mis Arcades</small></h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @arcades.each do |arcade| %>
+        <tr>
+          <td><%= arcade.name %></td>
+          <td><%= arcade.price %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <button class="btn btn-default">Pagar</button>
+  </div>
+</div>
