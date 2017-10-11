@@ -38,6 +38,9 @@ class ArcadesController < ApplicationController
     end
   end
 
+  def order_confirmations
+  end
+
   # POST /arcades
   # POST /arcades.json
   def create
