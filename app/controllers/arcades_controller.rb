@@ -45,7 +45,7 @@ class ArcadesController < ApplicationController
   def create
     
     @arcade = Arcade.new(arcade_params)
-    
+    @arcade.user = current_user
 
     respond_to do |format|
       if @arcade.save
