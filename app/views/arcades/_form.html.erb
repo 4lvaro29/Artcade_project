@@ -17,7 +17,7 @@
       <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
   
-  <%= f.select (:design_id, options_from_collection_for_select(@designs, :id, :name_price), {class: 'form-control'}) %>
+  <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price) %>
   <%= f.file_field :photo, class: 'form-control' %>
   <%= f.hidden_field :photo_cache %>
   <div class="actions sign-b">
