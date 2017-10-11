@@ -22,6 +22,12 @@
  	background-attachment: fixed;
  }
 
+h5.user {
+
+	color: white;
+	font-family: 'Nova Flat', cursive;
+	font-size: 20px
+}
 
 .navbar-default{
 	background-color: #262626 !important;

@@ -13,11 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-(//= require bootstrap.min
+//= require bootstrap.min
 //= require_tree .
 
 
-$(document).'turbolinks:load'(function(){
+$(document).on('turbolinks:load', function(){
 
 	$(window).scroll(function(){
 		var barra = $(window).scrollTop();
