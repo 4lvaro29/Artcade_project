@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011020118) do
+ActiveRecord::Schema.define(version: 20171011145948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20171011020118) do
     t.datetime "updated_at", null: false
     t.integer  "design_id"
     t.string   "image"
+    t.integer  "user_id"
     t.index ["design_id"], name: "index_arcades_on_design_id", using: :btree
     t.index ["order_id"], name: "index_arcades_on_order_id", using: :btree
+    t.index ["user_id"], name: "index_arcades_on_user_id", using: :btree
   end
 
   create_table "brands", force: :cascade do |t|
@@ -96,6 +98,7 @@ ActiveRecord::Schema.define(version: 20171011020118) do
 
   add_foreign_key "arcades", "designs"
   add_foreign_key "arcades", "orders"
+  add_foreign_key "arcades", "users"
   add_foreign_key "component_arcades", "arcades"
   add_foreign_key "component_arcades", "components"
   add_foreign_key "components", "brands"
