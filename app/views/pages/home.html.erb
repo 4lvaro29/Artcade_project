@@ -67,6 +67,24 @@
 			<%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
 		</div>
 	</div>
+	<hr>
+	<!-- List of arcades -->
+	<div class="panel panel-default">
+		<div class="panel-heading">		
+			<h1 class="titulo">Arcades hechos por otros usuarios</h1>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<% @arcades.each do |arcade| %>
+				<div class="col-md-3">
+					<img src="<%= arcade.design.image %>" alt="Arcade">
+					<p><%= arcade.name %></p>
+					<p><%= arcade.price %></p>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
 
 <br>
