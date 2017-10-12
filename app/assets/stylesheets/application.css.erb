@@ -15,10 +15,17 @@
  *= require_self
  */
  body {
+<<<<<<< HEAD:app/assets/stylesheets/application.css.erb
  	background: url("<%= asset_path 'fondo.png'%>");
+=======
+ 	margin: 0;
+ 	padding: 0;
+ 	background: url(fondo.png);
+>>>>>>> 92f691a3b14f6a3776e7ce3922e2bd195c129b82:app/assets/stylesheets/application.css
  	background-size: cover;
  	background-repeat: no-repeat;
  	background-attachment: fixed;
+ 	
  }
 
 h5.user {
@@ -125,6 +132,12 @@ div.boton {
 	text-align: center;
 
 }
+
+
+.vh100 {
+
+	min-height: calc(100vh - 175px);
+}
 .register-box{
 	margin-bottom: 100px !important;
 }
@@ -187,20 +200,22 @@ div.form-group{
 }
 
 
-
-
-/*
-.footer span {
-	color: white !important;
-	font-family: 'Nova Flat', cursive;
-	
+div.about {
+	color: white;
 }
 
+
+
 .footer {
+	align-self: flex-end;
 	padding: 20px;
 	margin: 0;
-	background-color: #262626 !important;
-	border-color: #262626 !important;
+	background-color: #262626;
+	border-color: #262626;
+	color: white;
+	font-family: 'Nova Flat', cursive;
+	text-align: left;
+	
+
 	
 	}
-*/
