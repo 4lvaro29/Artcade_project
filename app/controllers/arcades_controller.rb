@@ -41,7 +41,7 @@ class ArcadesController < ApplicationController
     end
   end
 
-  def order_confirmations
+  def order_confirmations #Pending
   end
 
   # POST /arcades
