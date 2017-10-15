@@ -7,6 +7,6 @@ class User < ApplicationRecord
   # Relations
   has_many :orders
   has_many :arcades
-  #User relations
+  
   
 end
