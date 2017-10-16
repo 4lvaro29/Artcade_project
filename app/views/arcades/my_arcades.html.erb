@@ -6,6 +6,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
+          <th>Mi diseño</th>
           <th>Nombre</th>
           <th>Precio</th>
         </tr>
@@ -13,6 +14,7 @@
       <tbody>
         <% @arcades.each do |arcade| %>
         <tr>
+          <td><%= image_tag(arcade.image, width: 50) %></td>
           <td><%= arcade.name %></td>
           <td><%= arcade.price %></td>
         </tr>

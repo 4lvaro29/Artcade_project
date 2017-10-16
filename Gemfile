@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

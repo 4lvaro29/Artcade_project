@@ -7,7 +7,8 @@ class Arcade < ApplicationRecord
   has_many :components, through: :component_arcade
 
   #Carrierwave
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :image, PhotoUploader
+  
 
   	# Instance Methods
 

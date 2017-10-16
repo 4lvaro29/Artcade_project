@@ -1,4 +1,4 @@
-<%= form_for(arcade) do |f| %>
+<%= form_for arcade, html: {multipart: true} do |f| %>
   <% if arcade.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(arcade.errors.count, "error") %> prohibited this arcade from being saved:</h2>
@@ -13,14 +13,19 @@
   
 <div class="form-box col-md-3">
   <div class="field">
-      <%= f.label :name, 'Nombre del Arcade' %>
+      <%= f.label :name, 'Nombra tu Arcade' %>
       <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
-  
+  <br>
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price) %>
-  <!-- <%= f.file_field :photo, class: 'form-control' %>
-  <%= f.hidden_field :photo_cache %>
-  -->
+  <%= f.label "Sube tu propio diseño (opcional)" %>
+  <%= f.file_field :image %>
+  <%= f.label "Puedes agregar la Url del diseño" %>
+  <%= f.text_field :remote_image_url %>
+  <%= f.hidden_field :image_cache %>
+  <%= image_tag(arcade.image) if arcade.image? %>
+
+  <!-- <%= f.file_field :photo, class: 'form-control' %>-->
   <div class="actions sign-b">
       <%= f.submit 'Continuar' %>
       <% end %>

@@ -95,6 +95,6 @@ class ArcadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arcade_params
-      params.require(:arcade).permit(:name, :price, :image, :order_id, :photo, :photo_cache, :design_id,component_ids:[])
+      params.require(:arcade).permit(:name, :price, :image, :order_id, :image_cache, :remote_image_url, :design_id,component_ids:[])
     end
 end
