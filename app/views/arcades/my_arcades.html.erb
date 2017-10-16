@@ -14,7 +14,7 @@
       <tbody>
         <% @arcades.each do |arcade| %>
         <tr>
-          <td><%= image_tag(arcade.image, width: 50) %></td>
+          <td><%= image_tag(arcade.image, class: "img-responsive arcade") %></td>
           <td><%= arcade.name %></td>
           <td><%= arcade.price %></td>
         </tr>
