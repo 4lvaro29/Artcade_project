@@ -3,9 +3,9 @@
 	<div class="row">
 		<div class="col-md-offset-3 col-md-6 col-md-offset-3 info-main">
 			<h1>Artcade | Diseña tu Arcade</h1>
-			<p>
+			<h3>
 				Bienvenidos a nuestra apliación de creación de Arcades, donde puedes comenzar a crear tu Arcade.
-			</p>
+			</h3>
 			
 		</div>
 	</div>
@@ -15,45 +15,54 @@
 <div class="container vh100"> 
 	<h2>Pasos para crear tu Artcade</h2>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<div class="thumbnail">
 					<div class="paso-index">
-						<p class="">1</p>
+						<i class="fa fa-user-plus fa-2x steps" aria-hidden="true"></i>
 					</div>
 					<div class="caption">
-						<i class="fa fa-user-plus fa-4x steps" aria-hidden="true"></i>
-						<h4>Debes registrarte o inciar sesión en nuestra aplicación</h4>
+						<h4 class="content">Debes registrarte o inciar sesión en nuestra aplicación</h4>
 					</div>
 				</div>
 			</div>
-	
-
-
-			<div class="col-md-4">
+		
+			<div class="col-md-3">
 				<div class="thumbnail">
 					<div class="paso-index">
-						<p class="">2</p>
+						<i class="fa fa-wrench fa-2x steps" aria-hidden="true"></i>
 					</div>
 					<div class="caption">
-						<i class="fa fa-wrench fa-4x steps" aria-hidden="true"></i>
-						<h4>Comienza a crear tu Arcade clickeando en el botón "Crear Arcade".</h4>
+						<h4 class="content">Comienza a crear tu Arcade clickeando en el botón "Crear Arcade".</h4>
 					</div>
 				</div>
 			</div>
-
-
-			<div class="col-md-4">
+			
+			<div class="col-md-3">
 				<div class="thumbnail">
 					<div class="paso-index">
-						<p class="">3</p>
+						<i class="fa fa-plus fa-2x steps2" aria-hidden="true"></i>
+						
 					</div>
 					<div class="caption">
-						<i class="fa fa-plus fa-4x steps" aria-hidden="true"></i>
-						<h4>Agrega los componentes a elección y luego confirmas</h4>
+						<h4 class="content">Agrega los componentes a elección y luego confirmas la compra</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<div class="paso-index">
+						<i class="fa fa-truck fa-2x steps" aria-hidden="true"></i>
+						
+					</div>
+					<div class="caption">
+						<h4 class="content">una vez cancelado, el Arcade será despachado a domicilio en 15 días hábiles</h4>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+		
 
 	<div class="boton">
 		<div class="container">
@@ -61,8 +70,6 @@
 			<h5 class="user"> Bienvenido <%= current_user.email %></h5>
 			<% end %>
 	
-
-
 			<%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
 		</div>
 	</div>
