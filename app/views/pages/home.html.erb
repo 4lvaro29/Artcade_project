@@ -69,8 +69,9 @@
 			<% if user_signed_in? %>
 			<h5 class="user"> Bienvenido <%= current_user.email %></h5>
 			<% end %>
-	
-			<%= link_to "Crea tu Arcade", new_arcade_path, class:"btn btn-primary" %>
+				<%= link_to new_arcade_path , class: "btn btn-default create" do %>
+    			<i class="fa fa-wrench create" aria-hidden="true"></i> Crea Tu Arcade
+				<% end %>
 		</div>
 	</div>
 	<hr>
