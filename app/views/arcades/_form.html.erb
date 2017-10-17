@@ -16,7 +16,8 @@
       <%= f.label :name, 'Nombra tu Arcade' %>
       <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
-  <br>
+  
+  <%= f.label :name, "Elige uno de nuestros diseños" %>
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price) %>
   <%= f.label "Sube tu propio diseño (opcional)" %>
   <%= f.file_field :image %>
