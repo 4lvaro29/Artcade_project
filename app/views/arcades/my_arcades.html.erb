@@ -1,3 +1,4 @@
+<div class="container">
 <div class="panel panel-default">
   <div class="panel-heading">   
     <h1 class="titulo">Mis Arcades</small></h1>
@@ -6,7 +7,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Mi diseño</th>
+          <th>Mis diseños</th>
           <th>Nombre</th>
           <th>Precio</th>
         </tr>
@@ -14,7 +15,7 @@
       <tbody>
         <% @arcades.each do |arcade| %>
         <tr>
-          <td><%= image_tag(arcade.image, class: "img-responsive arcade") %></td>
+          <td><%= image_tag(arcade.image, class:"img-responsive arcade") %></td>
           <td><%= arcade.name %></td>
           <td><%= arcade.price %></td>
         </tr>
@@ -23,4 +24,5 @@
     </table>
     <button class="btn btn-success">Pagar</button>
   </div>
+</div>
 </div>
