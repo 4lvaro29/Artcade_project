@@ -80,7 +80,8 @@
 			<div class="row">
 				<% @arcades.each do |arcade| %>
 				<div class="col-md-3">
-					<img src="<%= arcade.design.image %>" alt="Arcade">
+				<%= image_tag(arcade.image, class:"img-responsive") %>
+				<!--	<img src="<%= arcade.design.image %>" alt="Arcade"> -->
 					<p><%= arcade.name %></p>
 					<p><%= arcade.price %></p>
 					<%= link_to 'Ver detalle', arcade, class: 'btn btn-success' %>
