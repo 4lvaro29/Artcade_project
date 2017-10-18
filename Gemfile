@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
+gem 'dotenv-rails'
 # Use postgresql as the database for Active Record
 gem 'carrierwave'
 gem 'mini_magick'
