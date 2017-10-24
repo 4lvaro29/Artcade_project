@@ -5,7 +5,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <%= favicon_link_tag "lever2.png"%> 
+  <%= favicon_link_tag "lever2.png"%>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,9 +15,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  
+
 </head>
 
 
@@ -25,10 +25,11 @@
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId : '124940994875135',
+        appId : ENV['FACEBOOK_APP_ID'],
         xfbml : true,
-        version : 'v2.8' 
+        version : 'v2.10'
       });
+      FB.AppEvents.logPageView();
     };
     (function(d, s, id){
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -47,7 +48,7 @@
    <p class="alert"><%= alert %></p> -->
    <%= yield %>
 
-   
+
    <%= render 'shared/footer' %>
 
    <!-- Latest compiled and minified JavaScript -->

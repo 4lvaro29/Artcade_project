@@ -168,7 +168,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-  config.omniauth :facebook, "124940994875135","23e6494c04dc8f51ce17e46c7b5c9ea5"
+
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
@@ -251,6 +251,11 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'],
+                  client_options: {
+                      site: 'https://graph.facebook.com/v2.10',
+                      authorize_url: "https://www.facebook.com/v2.10/dialog/oauth"
+                    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

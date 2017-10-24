@@ -2,21 +2,23 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable,omniauth_providers: [:facebook]
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, omniauth_providers: [:facebook]
 
- 
+
  		def self.find_for_facebook_oauth(auth)
+      p auth
  			user = User.where(provider: auth.provider, uid: auth.uid).first
- 
+
  # The User was found in our database
  		return user if user
- 
+
  # Check if the User is already registered without Facebook
 		user = User.where(email: auth.info.email).first
  		return user if user
- 	
+
  		User.create(
- 			name: auth.extra.raw_info.name,
+ 			first_name: auth.extra.raw_info.name,
  			provider: auth.provider,
  			uid: auth.uid,
  			email: auth.info.email,
@@ -26,6 +28,6 @@ class User < ApplicationRecord
   # Relations
   has_many :orders
   has_many :arcades
-  
-  
+
+
 end
