@@ -25,6 +25,15 @@
       <%= f.submit "Log in"%>
     </div>
     <% end %>
+    <script>
+      FB.getLoginStatus(function(response){
+        statusChangeCallback(response);
+    });
+    </script>
+  <fb:login-button 
+    scope="public_profile,email"
+    onlogin="checkLoginState();">
+  </fb:login-button>
     <%= render "devise/shared/links" %> 
   </div>
 </div>
