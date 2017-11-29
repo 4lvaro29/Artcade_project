@@ -1,0 +1,19 @@
+$(document).on('turbolinks:load', function() {
+  var ad = $('#arcade_design_id').val()
+  $('#img-preview').css({'background-color':'red'})
+
+  $('#arcade_design_id').on('change', function() {
+    var ad = $(this).val()
+    if (ad == 1) {
+      $('#img-preview').css({'background-color':'red'})
+    } else if (ad == 2) {
+      $('#img-preview').css({'background-color':'blue'})
+    } else if (ad == 3) {
+      $('#img-preview').css({'background-color':'green'})
+    } else if (ad == 4) {
+      $('#img-preview').css({'background-color':'skyblue'})
+    } else if (ad == 5) {
+      $('#img-preview').css({'background-color':'purple'})
+    }
+  })
+})

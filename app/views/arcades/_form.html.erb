@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
-  
+
 <div class="form-box col-md-3">
   <div class="field">
       <%= f.label :name, 'Nombra tu Arcade' %>
       <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
-  
+
   <%= f.label :name, "Elige uno de nuestros diseños" %>
   <%= f.select :design_id, options_from_collection_for_select(@designs, :id, :name_price) %>
   <%= f.label "Sube tu propio diseño (opcional)" %>
@@ -33,3 +33,6 @@
   </div>
 </div>
 
+<div class="col-md-3 col-md-offset-3" id="img-preview">
+  <h1>imagen</h1>
+</div>
